@@ -1,5 +1,5 @@
 /* ============================================================================
-   BESPØKE – Minimal & Luxe (updated tweaks)
+   BESPØKE – Minimal & Luxe (with rotating circuit light on Ø)
    ========================================================================= */
 
 *,
@@ -93,15 +93,18 @@ img {
 .logo-mark {
   width: 30px;
   height: 30px;
-  border-radius: var(--radius-sm);
-  background: linear-gradient(135deg, #d4af37, #f4e5a1);
+  border-radius: 50%;
+  background: var(--bg);
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
   font-size: 15px;
-  color: var(--bg);
-  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+  color: var(--accent);
+  position: relative;
+  overflow: visible;
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
+  animation: circuitGlow 3s linear infinite;
 }
 
 .logo-text {
@@ -148,7 +151,7 @@ img {
    ========================================================================= */
 
 .hero {
-  padding: 100px 0 70px;
+  padding: 60px 0 70px;
   text-align: center;
   background: radial-gradient(ellipse at top, rgba(212, 175, 55, 0.04), transparent 60%);
 }
@@ -156,9 +159,9 @@ img {
 .hero-eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.5em;
-  font-size: 10px;
+  font-size: 12px;
   color: var(--accent);
-  margin-bottom: 14px;
+  margin-bottom: 20px;
   font-weight: 500;
 }
 
@@ -173,7 +176,9 @@ img {
 
 .hero-o-highlight {
   color: var(--accent);
-  text-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
+  position: relative;
+  display: inline-block;
+  animation: circuitGlow 3s linear infinite;
 }
 
 .hero-subtitle {
@@ -191,6 +196,28 @@ img {
   max-width: 760px;
   margin: 0 auto;
   line-height: 1.75;
+}
+
+/* ============================================================================
+   CIRCUIT GLOW ANIMATION (rotating light around Ø)
+   ========================================================================= */
+
+@keyframes circuitGlow {
+  0% {
+    filter: drop-shadow(0 -8px 6px rgba(212, 175, 55, 0.9));
+  }
+  25% {
+    filter: drop-shadow(8px 0 6px rgba(212, 175, 55, 0.9));
+  }
+  50% {
+    filter: drop-shadow(0 8px 6px rgba(212, 175, 55, 0.9));
+  }
+  75% {
+    filter: drop-shadow(-8px 0 6px rgba(212, 175, 55, 0.9));
+  }
+  100% {
+    filter: drop-shadow(0 -8px 6px rgba(212, 175, 55, 0.9));
+  }
 }
 
 /* ============================================================================
@@ -613,7 +640,7 @@ img {
   }
 
   .hero {
-    padding: 70px 0 50px;
+    padding: 50px 0 50px;
   }
 
   .hero-title {
