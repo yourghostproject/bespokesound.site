@@ -1,5 +1,5 @@
 /* ============================================================================
-   BESPØKE – UI/UX Director Refined Version
+   BESPØKE – Minimal & Luxe (refined, shorter copy version)
    ========================================================================= */
 
 *,
@@ -184,9 +184,8 @@ img {
 
 .hero-description {
   font-size: 14px;
-  font-style: italic;
   color: var(--text-muted);
-  max-width: 720px;
+  max-width: 760px;
   margin: 0 auto;
   line-height: 1.75;
 }
@@ -227,7 +226,7 @@ img {
 }
 
 /* ============================================================================
-   WHAT IS BESPØKE
+   WHAT IS BESPØKE (simplified)
    ========================================================================= */
 
 .what-content {
@@ -236,19 +235,12 @@ img {
   text-align: center;
 }
 
-.what-title {
-  font-size: 26px;
+.what-lead {
+  font-size: 22px;
   font-weight: 400;
-  line-height: 1.4;
-  margin: 0 0 20px;
-  color: var(--text-main);
-}
-
-.what-body {
-  font-size: 14px;
-  color: var(--text-muted);
-  line-height: 1.75;
+  line-height: 1.5;
   margin: 0;
+  color: var(--text-main);
 }
 
 /* ============================================================================
@@ -539,4 +531,106 @@ img {
   padding: var(--spacing-section) 0;
   text-align: center;
   background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.05), transparent 70%);
+}
+
+.cta-final-title {
+  font-size: 28px;
+  margin: 0 0 14px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.cta-final-text {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 0 0 32px;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-final-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ============================================================================
+   FOOTER
+   ========================================================================= */
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 20px 0 24px;
+  background: var(--bg);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  color: var(--text-muted);
+  gap: 12px;
+}
+
+/* ============================================================================
+   RESPONSIVE
+   ========================================================================= */
+
+@media (max-width: 880px) {
+  :root {
+    --spacing-section: 60px;
+  }
+
+  .hero {
+    padding: 70px 0 50px;
+  }
+
+  .hero-title {
+    font-size: 48px;
+  }
+
+  .main-nav {
+    font-size: 11px;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .step-hero {
+    padding: 40px 28px;
+  }
+
+  .step-actions,
+  .cta-final-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .step-actions .btn,
+  .cta-final-actions .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: 38px;
+    letter-spacing: 0.18em;
+  }
+
+  .pricing-grid,
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-header {
+    position: static;
+  }
 }
