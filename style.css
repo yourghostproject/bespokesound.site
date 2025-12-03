@@ -1,5 +1,5 @@
 /* ============================================================================
-   BESPØKE – Minimal & Luxe (4 package layout)
+   BESPØKE – Minimal & Luxe (updated tweaks)
    ========================================================================= */
 
 *,
@@ -155,7 +155,7 @@ img {
 
 .hero-eyebrow {
   text-transform: uppercase;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.5em;
   font-size: 10px;
   color: var(--accent);
   margin-bottom: 14px;
@@ -169,6 +169,11 @@ img {
   margin: 0 0 10px;
   font-weight: 200;
   line-height: 1.1;
+}
+
+.hero-o-highlight {
+  color: var(--accent);
+  text-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
 }
 
 .hero-subtitle {
@@ -221,32 +226,6 @@ img {
   color: var(--text-muted);
   margin: 0 0 50px;
   font-style: italic;
-}
-
-/* ============================================================================
-   STATEMENT SECTION
-   ========================================================================= */
-
-.section-statement {
-  background: linear-gradient(to bottom, var(--bg), var(--bg-elevated) 40%, var(--bg) 100%);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  padding: var(--spacing-section) 0;
-}
-
-.statement-content {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.statement-text {
-  font-size: 28px;
-  font-weight: 400;
-  line-height: 1.45;
-  margin: 0;
-  color: var(--accent);
-  letter-spacing: 0.02em;
 }
 
 /* ============================================================================
@@ -336,6 +315,31 @@ img {
   color: var(--text-muted);
   margin: 0;
   line-height: 1.7;
+}
+
+/* ============================================================================
+   STATEMENT SECTION (before packages)
+   ========================================================================= */
+
+.section-statement {
+  background: var(--bg);
+  padding: var(--spacing-section) 0;
+}
+
+.statement-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.statement-text {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.45;
+  margin: 0;
+  color: var(--text-main);
+  letter-spacing: 0.02em;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.3);
 }
 
 /* ============================================================================
