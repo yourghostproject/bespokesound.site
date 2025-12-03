@@ -184,19 +184,83 @@ img {
   font-style: italic;
 }
 
-/* How it works */
+/* What is BESPØKE */
 
-.steps-grid {
+.what-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.what-lead {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 16px;
+  color: var(--text-main);
+}
+
+.what-body {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* How it works – Step 01 Hero */
+
+.step-hero {
+  max-width: 650px;
+  margin: 0 auto 50px;
+  text-align: center;
+  padding: 40px 30px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.step-number-large {
+  display: inline-block;
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.step-title-large {
+  font-size: 24px;
+  margin: 0 0 12px;
+  font-weight: 400;
+}
+
+.step-description-large {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 0 0 24px;
+  line-height: 1.7;
+}
+
+.step-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* How it works – Steps 02 & 03 */
+
+.steps-grid-small {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
 }
 
-.step-card {
-  background: var(--bg-elevated);
+.step-card-small {
+  background: var(--bg);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 20px;
+  padding: 24px;
   box-shadow: var(--shadow);
 }
 
@@ -209,16 +273,17 @@ img {
   margin-bottom: 8px;
 }
 
-.step-card h3 {
-  font-size: 15px;
+.step-card-small h3 {
+  font-size: 16px;
   margin: 0 0 8px;
   font-weight: 500;
 }
 
-.step-card p {
+.step-card-small p {
   font-size: 13px;
   color: var(--text-muted);
   margin: 0;
+  line-height: 1.6;
 }
 
 /* Pricing */
@@ -232,7 +297,7 @@ img {
 
 .pricing-card {
   position: relative;
-  background: var(--bg);
+  background: var(--bg-elevated);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 24px 20px;
@@ -362,52 +427,10 @@ img {
   border-color: var(--accent);
 }
 
-/* CTA Section */
-
-.section-cta {
-  background: var(--bg);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-
-.cta-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-}
-
-.cta-box {
-  background: var(--bg-elevated);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 24px;
-  box-shadow: var(--shadow);
-}
-
-.cta-box h3 {
-  font-size: 14px;
-  margin: 0 0 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
-.cta-note {
-  font-size: 12px;
-  color: var(--text-muted);
-  margin: 6px 0;
-  font-style: italic;
-}
-
-.cta-link {
-  font-size: 13px;
-  margin: 8px 0 0;
-  font-weight: 500;
-}
-
 /* About Placeholder */
 
 .about-placeholder {
-  background: var(--bg-elevated);
+  background: var(--bg);
   border: 1px dashed var(--border);
   border-radius: var(--radius);
   padding: 60px 20px;
@@ -472,7 +495,7 @@ img {
   }
 
   .pricing-grid,
-  .cta-grid {
+  .steps-grid-small {
     grid-template-columns: 1fr;
   }
 
@@ -483,5 +506,9 @@ img {
 
   .site-header {
     position: static;
+  }
+
+  .step-actions {
+    flex-direction: column;
   }
 }
