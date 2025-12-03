@@ -1,5 +1,5 @@
 /* ============================================================================
-   BESPØKE – Minimal & Luxe (4 package layout)
+   BESPØKE – Minimal & Luxe (Hero updated)
    ========================================================================= */
 
 *,
@@ -153,12 +153,12 @@ img {
   background: radial-gradient(ellipse at top, rgba(212, 175, 55, 0.04), transparent 60%);
 }
 
-.hero-eyebrow {
+.hero-introducing {
   text-transform: uppercase;
   letter-spacing: 0.22em;
-  font-size: 10px;
+  font-size: 3em;
   color: var(--accent);
-  margin-bottom: 14px;
+  margin: 0 0 20px;
   font-weight: 500;
 }
 
@@ -169,6 +169,23 @@ img {
   margin: 0 0 10px;
   font-weight: 200;
   line-height: 1.1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.hero-o-styled {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #d4af37, #f4e5a1);
+  color: var(--bg);
+  font-weight: 700;
+  box-shadow: 0 6px 18px rgba(212, 175, 55, 0.4);
 }
 
 .hero-subtitle {
@@ -177,15 +194,24 @@ img {
   font-weight: 400;
   color: var(--text-main);
   text-align: center;
-  max-width: 100%;
 }
 
 .hero-description {
   font-size: 14px;
   color: var(--text-soft-white);
   max-width: 760px;
-  margin: 0 auto;
+  margin: 0 auto 30px;
   line-height: 1.75;
+}
+
+.hero-tagline {
+  font-size: 2em;
+  color: var(--text-main);
+  margin: 0 auto;
+  max-width: 700px;
+  line-height: 1.4;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+  font-weight: 400;
 }
 
 /* ============================================================================
@@ -221,32 +247,6 @@ img {
   color: var(--text-muted);
   margin: 0 0 50px;
   font-style: italic;
-}
-
-/* ============================================================================
-   STATEMENT SECTION
-   ========================================================================= */
-
-.section-statement {
-  background: linear-gradient(to bottom, var(--bg), var(--bg-elevated) 40%, var(--bg) 100%);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  padding: var(--spacing-section) 0;
-}
-
-.statement-content {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.statement-text {
-  font-size: 28px;
-  font-weight: 400;
-  line-height: 1.45;
-  margin: 0;
-  color: var(--accent);
-  letter-spacing: 0.02em;
 }
 
 /* ============================================================================
@@ -612,12 +612,21 @@ img {
     padding: 70px 0 50px;
   }
 
+  .hero-introducing {
+    font-size: 2.2em;
+  }
+
   .hero-title {
     font-size: 48px;
   }
 
-  .statement-text {
-    font-size: 22px;
+  .hero-o-styled {
+    width: 48px;
+    height: 48px;
+  }
+
+  .hero-tagline {
+    font-size: 1.5em;
   }
 
   .main-nav {
@@ -643,13 +652,23 @@ img {
 }
 
 @media (max-width: 640px) {
+  .hero-introducing {
+    font-size: 2em;
+  }
+
   .hero-title {
     font-size: 38px;
     letter-spacing: 0.18em;
   }
 
-  .statement-text {
+  .hero-o-styled {
+    width: 38px;
+    height: 38px;
     font-size: 20px;
+  }
+
+  .hero-tagline {
+    font-size: 1.3em;
   }
 
   .steps-grid {
