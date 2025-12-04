@@ -1,5 +1,5 @@
 /* ============================================================================
-   BESPØKE – Minimal & Luxe (clean version)
+   BESPØKE – Minimal & Luxe (FINAL VERSION)
    ========================================================================= */
 
 *,
@@ -21,12 +21,12 @@
   --text-muted: #9a9a9a;
   --border: rgba(212, 175, 55, 0.18);
   --border-strong: rgba(212, 175, 55, 0.4);
-
+  
   /* Spacing & Borders */
   --radius: 14px;
   --radius-sm: 8px;
   --spacing-section: 80px;
-
+  
   /* Shadows */
   --shadow-soft: 0 14px 50px rgba(0, 0, 0, 0.65);
   --shadow-strong: 0 20px 70px rgba(0, 0, 0, 0.85), 0 0 30px rgba(212, 175, 55, 0.15);
@@ -134,11 +134,11 @@ img {
 }
 
 /* ============================================================================
-   HERO
+   HERO (OPTIMIZED)
    ========================================================================= */
 
 .hero {
-  padding: 30px 0 70px;
+  padding: 50px 0 90px;
   text-align: center;
   background: radial-gradient(ellipse at top, rgba(212, 175, 55, 0.04), transparent 60%);
 }
@@ -148,7 +148,7 @@ img {
   letter-spacing: 0.6em;
   font-size: 18px;
   color: var(--accent);
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   font-weight: 200;
 }
 
@@ -156,7 +156,7 @@ img {
   font-size: 64px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  margin: 0 0 10px;
+  margin: 0 0 16px;
   font-weight: 200;
   line-height: 1.1;
 }
@@ -166,24 +166,26 @@ img {
 }
 
 .hero-subtitle {
-  font-size: 20px;
-  margin: 0 0 22px;
+  font-size: 22px;
+  margin: 0 0 32px;
   font-weight: 400;
   color: var(--text-main);
   text-align: center;
   max-width: 100%;
+  letter-spacing: 0.01em;
 }
 
 .hero-description {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--text-soft-white);
-  max-width: 760px;
+  max-width: 820px;
   margin: 0 auto;
-  line-height: 1.75;
+  line-height: 1.85;
+  font-weight: 300;
 }
 
 /* ============================================================================
-   SECTIONS
+   SECTIONS (OPTIMIZED SPACING)
    ========================================================================= */
 
 .section {
@@ -200,11 +202,12 @@ img {
   border-bottom: 1px solid var(--border);
 }
 
-.section-divider {
-  width: 100%;
+/* Small divider only before packages */
+.section-divider-subtle {
+  width: 80px;
   height: 1px;
   background: var(--border);
-  margin: 0 0 40px;
+  margin: 0 auto 60px;
 }
 
 .section-title {
@@ -314,12 +317,12 @@ img {
 }
 
 /* ============================================================================
-   STATEMENT SECTION (before packages)
+   STATEMENT SECTION (OPTIMIZED)
    ========================================================================= */
 
 .section-statement {
   background: var(--bg);
-  padding: var(--spacing-section) 0;
+  padding: 100px 0;
 }
 
 .statement-content {
@@ -329,13 +332,12 @@ img {
 }
 
 .statement-text {
-  font-size: 28px;
-  font-weight: 400;
-  line-height: 1.45;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 1.5;
   margin: 0;
   color: var(--text-main);
-  letter-spacing: 0.02em;
-  text-shadow: 0 0 6px rgba(255, 255, 255, 0.3);
+  letter-spacing: 0.01em;
 }
 
 /* ============================================================================
@@ -615,12 +617,12 @@ img {
   .pricing-grid-3 {
     grid-template-columns: 1fr;
   }
-
+  
   .pricing-card-horizontal {
     flex-direction: column;
     gap: 20px;
   }
-
+  
   .private-left {
     flex: 1;
   }
@@ -630,42 +632,54 @@ img {
   :root {
     --spacing-section: 60px;
   }
-
+  
   .hero {
-    padding: 50px 0 50px;
+    padding: 50px 0 60px;
   }
-
+  
   .hero-eyebrow {
     display: none;
   }
-
+  
   .hero-title {
     font-size: 48px;
   }
-
-  .statement-text {
-    font-size: 22px;
+  
+  .hero-subtitle {
+    font-size: 20px;
   }
-
+  
+  .hero-description {
+    font-size: 15px;
+  }
+  
+  .statement-text {
+    font-size: 24px;
+  }
+  
   .main-nav {
     font-size: 11px;
     gap: 14px;
     flex-wrap: wrap;
   }
-
+  
   .step-hero {
     padding: 40px 28px;
   }
-
+  
   .step-actions,
   .cta-final-actions {
     flex-direction: column;
     width: 100%;
   }
-
+  
   .step-actions .btn,
   .cta-final-actions .btn {
     width: 100%;
+  }
+  
+  .section-statement {
+    padding: 70px 0;
   }
 }
 
@@ -674,20 +688,28 @@ img {
     font-size: 38px;
     letter-spacing: 0.18em;
   }
-
-  .statement-text {
-    font-size: 20px;
+  
+  .hero-subtitle {
+    font-size: 18px;
   }
-
+  
+  .hero-description {
+    font-size: 14px;
+  }
+  
+  .statement-text {
+    font-size: 22px;
+  }
+  
   .steps-grid {
     grid-template-columns: 1fr;
   }
-
+  
   .footer-inner {
     flex-direction: column;
     align-items: flex-start;
   }
-
+  
   .site-header {
     position: static;
   }
