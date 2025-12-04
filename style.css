@@ -653,4 +653,214 @@ img {
 }
 
 .about-content p {
-  font
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--text-soft-white);
+  margin: 0;
+}
+
+.about-content strong {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ============================================================================
+   FINAL CTA
+   ========================================================================= */
+
+.section-cta-final {
+  padding: var(--spacing-section) 0;
+  text-align: center;
+  background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.05), transparent 70%);
+}
+
+.cta-final-title {
+  font-size: 28px;
+  margin: 0 0 14px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.cta-final-text {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 0 0 32px;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-final-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ============================================================================
+   FOOTER (IMPROVED)
+   ========================================================================= */
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 20px 0 24px;
+  background: var(--bg);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  color: var(--text-muted);
+  gap: 20px;
+}
+
+.footer-left p {
+  margin: 4px 0;
+}
+
+.footer-right {
+  display: flex;
+  gap: 20px;
+  font-size: 12px;
+}
+
+.footer-right a {
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+}
+
+.footer-right a:hover {
+  color: var(--accent);
+}
+
+/* ============================================================================
+   RESPONSIVE
+   ========================================================================= */
+
+@media (max-width: 1024px) {
+  .pricing-grid-3 {
+    grid-template-columns: 1fr;
+  }
+  
+  .pricing-card-horizontal {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .private-left {
+    flex: 1;
+  }
+  
+  .sound-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 880px) {
+  :root {
+    --spacing-section: 60px;
+  }
+  
+  .hero {
+    padding: 50px 0 60px;
+  }
+  
+  .hero-eyebrow {
+    display: none;
+  }
+  
+  .hero-title {
+    font-size: 48px;
+  }
+  
+  .hero-subtitle {
+    font-size: 20px;
+  }
+  
+  .hero-description {
+    font-size: 15px;
+  }
+  
+  .statement-text {
+    font-size: 24px;
+  }
+  
+  .main-nav {
+    font-size: 11px;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  
+  .step-hero {
+    padding: 40px 28px;
+  }
+  
+  .step-actions,
+  .cta-final-actions,
+  .hero-cta {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .step-actions .btn,
+  .cta-final-actions .btn,
+  .hero-cta .btn {
+    width: 100%;
+  }
+  
+  .section-statement {
+    padding: 70px 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .logo-text {
+    display: none;
+  }
+  
+  .hero-title {
+    font-size: 38px;
+    letter-spacing: 0.18em;
+  }
+  
+  .hero-subtitle {
+    font-size: 18px;
+  }
+  
+  .hero-description {
+    font-size: 14px;
+  }
+  
+  .statement-text {
+    font-size: 22px;
+  }
+  
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .sound-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .sound-preview {
+    aspect-ratio: 9 / 16;
+  }
+  
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .footer-right {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .site-header {
+    position: static;
+  }
+}
