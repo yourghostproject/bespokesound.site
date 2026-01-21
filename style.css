@@ -942,3 +942,49 @@ img {
     position: static;
   }
 }
+
+
+/* ============================================================================
+   ENHANCED VIDEO RESPONSIVE (VERTICAL 9:16 FORMAT)
+   ========================================================================= */
+
+/* Ensure videos look perfect on mobile devices */
+@media (max-width: 768px) {
+  .sound-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    max-width: 500px;
+    margin: 0 auto 50px;
+  }
+
+  .sound-preview {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .sound-video {
+    border-radius: 8px;
+  }
+}
+
+/* Very small screens - make videos take more width */
+@media (max-width: 480px) {
+  .sound-grid {
+    max-width: 100%;
+  }
+
+  .sound-card {
+    margin: 0 auto;
+    max-width: 95vw;
+  }
+}
+
+/* Improve video loading and playback */
+.sound-video {
+  background: #000;
+  cursor: pointer;
+}
+
+.sound-video::-webkit-media-controls-panel {
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+}
