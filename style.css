@@ -988,11 +988,3 @@ img {
 .sound-video::-webkit-media-controls-panel {
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
 }
-
-
-/* Bold hero description variant */
-.hero-description-bold {
-  font-weight: 500;
-  font-size: 18px;
-  color: var(--text-main);
-}
