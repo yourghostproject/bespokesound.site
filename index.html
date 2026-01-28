@@ -52,12 +52,9 @@
       <h1 class="hero-title">
         BESP<span class="hero-o-highlight">Ø</span>KE
       </h1>
-      <p class="hero-subtitle">First‑class sound for elite creators</p>
+      <p class="hero-subtitle">Signature sound for paid campaigns and high‑end lifestyle Reels.</p>
       <p class="hero-description">
-        From paid campaigns and brand launches to luxury lifestyle storytelling, BESPØKE is your on‑call private music producer.
-      </p>
-      <p class="hero-description">
-        Led by major‑label‑trusted French producer Gauthier Matherat, we deliver bespoke, fully‑cleared soundtracks designed to make your content unmistakably yours.
+        Your on‑call private music producer, led by major‑label‑trusted French producer Gauthier Matherat, creating bespoke, fully‑cleared tracks you can use across all your commercial content.
       </p>
       
       <!-- Hero CTA -->
@@ -372,71 +369,5 @@
     </div>
   </footer>
 
-
-  <!-- =========================================================================
-       MODAL POPUP FOR TALLY FORM
-       ========================================================================= -->
-  <div id="formModal" class="modal">
-    <div class="modal-overlay"></div>
-    <div class="modal-content">
-      <button class="modal-close">&times;</button>
-      <div class="modal-body">
-        <h2 class="modal-title">Get Your Free Preview</h2>
-        <p class="modal-subtitle">Fill out the form below and get a custom 10-15s music preview within 24 hours.</p>
-        <iframe 
-          data-tally-src="https://tally.so/embed/Pdz7p5?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
-          loading="lazy" 
-          width="100%" 
-          height="600" 
-          frameborder="0" 
-          marginheight="0" 
-          marginwidth="0" 
-          title="Get Your Free Preview">
-        </iframe>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    // Tally embed script
-    var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}
-
-    // Modal functionality
-    const modal = document.getElementById('formModal');
-    const modalOverlay = document.querySelector('.modal-overlay');
-    const modalClose = document.querySelector('.modal-close');
-
-    // Get all buttons that should open the modal
-    const openModalButtons = document.querySelectorAll('a[href="#"]');
-
-    // Open modal when clicking any "Get your free preview" button
-    openModalButtons.forEach(button => {
-      button.addEventListener('click', function(e) {
-        e.preventDefault();
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Prevent background scrolling
-      });
-    });
-
-    // Close modal when clicking X
-    modalClose.addEventListener('click', function() {
-      modal.classList.remove('active');
-      document.body.style.overflow = ''; // Re-enable scrolling
-    });
-
-    // Close modal when clicking overlay
-    modalOverlay.addEventListener('click', function() {
-      modal.classList.remove('active');
-      document.body.style.overflow = ''; // Re-enable scrolling
-    });
-
-    // Close modal with Escape key
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape' && modal.classList.contains('active')) {
-        modal.classList.remove('active');
-        document.body.style.overflow = ''; // Re-enable scrolling
-      }
-    });
-  </script>
 </body>
 </html>
