@@ -1,8 +1,6 @@
 /* ============================================================================
-
-BESPØKE – Minimal & Luxe (FINAL VERSION - All improvements included)
-
-========================================================================= */
+   BESPØKE – Minimal & Luxe (FINAL VERSION)
+   ========================================================================= */
 
 *,
 *::before,
@@ -67,7 +65,7 @@ img {
 }
 
 /* ============================================================================
-   HEADER (IMPROVED)
+   HEADER
    ========================================================================= */
 
 .site-header {
@@ -151,7 +149,7 @@ img {
 }
 
 /* ============================================================================
-   HERO (OPTIMIZED)
+   HERO
    ========================================================================= */
 
 .hero {
@@ -209,7 +207,7 @@ img {
 }
 
 /* ============================================================================
-   SECTIONS (OPTIMIZED SPACING)
+   SECTIONS
    ========================================================================= */
 
 .section {
@@ -333,7 +331,7 @@ img {
 }
 
 /* ============================================================================
-   SOUND EXAMPLES SECTION (NEW)
+   SOUND EXAMPLES
    ========================================================================= */
 
 .section-sound-examples {
@@ -425,7 +423,7 @@ img {
 }
 
 /* ============================================================================
-   FORM SECTION (TALLY INTEGRATION)
+   FORM SECTION (TALLY)
    ========================================================================= */
 
 .section-form {
@@ -449,7 +447,7 @@ img {
 }
 
 /* ============================================================================
-   STATEMENT SECTION (OPTIMIZED)
+   STATEMENT
    ========================================================================= */
 
 .section-statement {
@@ -473,7 +471,7 @@ img {
 }
 
 /* ============================================================================
-   PRICING – 3 cards top, 1 card bottom HORIZONTAL
+   PRICING
    ========================================================================= */
 
 .pricing-grid-3 {
@@ -517,7 +515,6 @@ img {
   box-shadow: 0 22px 70px rgba(0, 0, 0, 0.88), 0 0 20px rgba(212, 175, 55, 0.2);
 }
 
-/* Horizontal layout for Private Producer */
 .pricing-card-horizontal {
   flex-direction: row;
   gap: 40px;
@@ -675,7 +672,7 @@ img {
 }
 
 /* ============================================================================
-   ABOUT SECTION (WITH PHOTO LAYOUT)
+   ABOUT
    ========================================================================= */
 
 .about-layout {
@@ -746,33 +743,6 @@ img {
   font-weight: 600;
 }
 
-/* Responsive */
-@media (max-width: 880px) {
-  .about-layout {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .about-photo {
-    max-width: 400px;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 640px) {
-  .about-photo {
-    max-width: 100%;
-  }
-
-  .about-name {
-    font-size: 22px;
-  }
-
-  .about-text p {
-    font-size: 14px;
-  }
-}
-
 /* ============================================================================
    FINAL CTA
    ========================================================================= */
@@ -807,7 +777,7 @@ img {
 }
 
 /* ============================================================================
-   FOOTER (IMPROVED)
+   FOOTER
    ========================================================================= */
 
 .site-footer {
@@ -922,6 +892,16 @@ img {
   .section-statement {
     padding: 70px 0;
   }
+
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-photo {
+    max-width: 400px;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 640px) {
@@ -976,13 +956,20 @@ img {
   .form-wrapper {
     padding: 12px;
   }
+
+  .about-photo {
+    max-width: 100%;
+  }
+
+  .about-name {
+    font-size: 22px;
+  }
+
+  .about-text p {
+    font-size: 14px;
+  }
 }
 
-/* ============================================================================
-   ENHANCED VIDEO RESPONSIVE (VERTICAL 9:16 FORMAT)
-   ========================================================================= */
-
-/* Ensure videos look perfect on mobile devices */
 @media (max-width: 768px) {
   .sound-grid {
     grid-template-columns: 1fr;
@@ -1001,7 +988,6 @@ img {
   }
 }
 
-/* Very small screens - make videos take more width */
 @media (max-width: 480px) {
   .sound-grid {
     max-width: 100%;
