@@ -674,7 +674,7 @@ img {
 }
 
 .about-bio {
-  padding-top: 20px;
+  padding-top: 50px;
 }
 
 .about-name {
@@ -741,6 +741,63 @@ img {
   }
 }
 
+
+
+/* ============================================================================
+   CONTACT INFO DISPLAY
+   ========================================================================= */
+
+.contact-info {
+  text-align: center;
+  margin: 0 0 32px;
+  padding: 24px;
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-detail {
+  font-size: 15px;
+  margin: 0 0 12px;
+  color: var(--text-main);
+}
+
+.contact-detail:last-child {
+  margin-bottom: 0;
+}
+
+.contact-label {
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 11px;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.contact-link {
+  color: var(--text-main);
+  transition: color 0.2s ease;
+  font-weight: 500;
+}
+
+.contact-link:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 640px) {
+  .contact-info {
+    padding: 20px 16px;
+  }
+
+  .contact-detail {
+    font-size: 14px;
+  }
+}
 
 /* ============================================================================
    FINAL CTA
