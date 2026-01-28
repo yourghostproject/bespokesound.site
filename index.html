@@ -26,8 +26,6 @@
           <span class="logo-text">BESPØKE</span>
         </a>
         <nav class="main-nav">
-          <a href="#how-it-works">How it works</a>
-          <a href="#sound-examples">Examples</a>
           <a href="#packages">Packages</a>
           <a href="#about">About</a>
           <a href="#contact" class="nav-cta">Contact</a>
@@ -50,7 +48,7 @@
       
       <!-- Hero CTA -->
       <div class="hero-cta">
-        <a href="mailto:hello@bespokesound.site?subject=New Inquiry" class="btn btn-primary btn-large">Email us</a>
+        <button onclick="copyEmail()" class="btn btn-primary btn-large" id="emailBtn">Copy email address</button>
         <a href="https://wa.me/447949375440" class="btn btn-outline btn-large">WhatsApp</a>
       </div>
     </div>
@@ -70,7 +68,7 @@
           Message me directly on WhatsApp or email. You'll get a clear recommendation and quote within 24 hours.
         </p>
         <div class="step-actions">
-          <a href="mailto:hello@bespokesound.site?subject=New Inquiry" class="btn btn-primary btn-large">Email us</a>
+          <button onclick="copyEmail()" class="btn btn-primary btn-large" id="emailBtn">Copy email address</button>
           <a href="https://wa.me/447949375440" class="btn btn-outline btn-large">WhatsApp</a>
         </div>
       </div>
@@ -292,8 +290,21 @@
     <div class="container">
       <h2 class="cta-final-title">Ready to own your sound?</h2>
       <p class="cta-final-text">Email us or message on WhatsApp. You'll get a recommendation and quote within 24 hours.</p>
+
+      <!-- Contact Info Display -->
+      <div class="contact-info">
+        <p class="contact-detail">
+          <span class="contact-label">Email:</span> 
+          <a href="mailto:hello@bespokesound.site" class="contact-link">hello@bespokesound.site</a>
+        </p>
+        <p class="contact-detail">
+          <span class="contact-label">WhatsApp:</span> 
+          <a href="https://wa.me/447949375440?text=Hi%20Gauthier%20%E2%80%94%20I%27d%20like%20a%20bespoke%20track.%0APlatform%3A%20%0AStyle%3A%20%0ADeadline%3A%20" target="_blank" rel="noopener" class="contact-link">+44 7949 375 440</a>
+        </p>
+      </div>
+
       <div class="cta-final-actions">
-        <a href="mailto:hello@bespokesound.site?subject=New Inquiry" class="btn btn-primary btn-large">Email us</a>
+        <button onclick="copyEmail()" class="btn btn-primary btn-large" id="emailBtn">Copy email address</button>
         <a href="https://wa.me/447949375440" class="btn btn-outline btn-large">WhatsApp</a>
       </div>
     </div>
@@ -315,5 +326,22 @@
     </div>
   </footer>
 
+  <script>
+    function copyEmail() {
+      const email = 'hello@bespokesound.site';
+      navigator.clipboard.writeText(email).then(function() {
+        const btn = document.getElementById('emailBtn');
+        const originalText = btn.textContent;
+        btn.textContent = '✓ Email copied!';
+        btn.style.background = '#4CAF50';
+        setTimeout(function() {
+          btn.textContent = originalText;
+          btn.style.background = '';
+        }, 2000);
+      }).catch(function(err) {
+        alert('Email: hello@bespokesound.site');
+      });
+    }
+  </script>
 </body>
 </html>
