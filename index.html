@@ -327,12 +327,31 @@
   </footer>
 
   <script>
+    // Toggle contact options visibility
+    function toggleContactOptions() {
+      const options = document.getElementById('contactOptions');
+      const btn = document.getElementById('getInTouchBtn');
+
+      if (options.classList.contains('active')) {
+        options.classList.remove('active');
+        btn.textContent = 'GET IN TOUCH';
+      } else {
+        options.classList.add('active');
+        btn.textContent = 'CLOSE';
+        // Smooth scroll to options
+        setTimeout(() => {
+          options.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 100);
+      }
+    }
+
+    // Copy email function
     function copyEmail() {
       const email = 'hello@bespokesound.site';
       navigator.clipboard.writeText(email).then(function() {
-        const btn = document.getElementById('emailBtn');
+        const btn = document.getElementById('copyEmailBtn');
         const originalText = btn.textContent;
-        btn.textContent = '✓ Email copied!';
+        btn.textContent = '✓ Copied!';
         btn.style.background = '#4CAF50';
         setTimeout(function() {
           btn.textContent = originalText;
