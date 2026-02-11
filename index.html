@@ -162,10 +162,30 @@
       <!-- Sound CTA -->
       <div class="sound-cta">
         <p class="sound-cta-text">Want a custom track for your brand?</p>
-        <a href="mailto:hello@bespokesound.site?subject=New Inquiry" class="btn btn-primary">Email us</a>
-        <a href="https://wa.me/447949375440" class="btn btn-outline">WhatsApp</a>
+        <button onclick="toggleSoundExamplesContact()" class="btn btn-primary btn-large" id="soundExamplesBtn">
+          GET YOUR EXCLUSIVE FREE PREVIEW
+        </button>
       </div>
-    </div>
+
+      <!-- Sound Examples Contact Options -->
+      <div class="contact-options" id="soundExamplesContact">
+        <p class="contact-options-label">Choose your preferred contact method:</p>
+        <div class="contact-methods">
+          <div class="contact-method">
+            <span class="contact-icon">📧</span>
+            <span class="contact-value">hello@bespokesound.site</span>
+            <button onclick="copyEmailSoundExamples()" class="contact-action-btn" id="copyEmailSound">Copy</button>
+          </div>
+          <div class="contact-method">
+            <span class="contact-icon">💬</span>
+            <span class="contact-value">+44 7949 375 440</span>
+            <a href="https://wa.me/447949375440?text=Hi%20Gauthier%2C%0A%0AI%27d%20love%20BESP%C3%98KE%20to%20produce%20a%20free%2030-second%20preview%20track%20for%20my%20channel.%0A%0AThe%20vibe%20I%27m%20looking%20for%3A%20%0A%0AThanks!" 
+               target="_blank" 
+               rel="noopener" 
+               class="contact-action-btn contact-action-link">WhatsApp</a>
+          </div>
+        </div>
+      </div>iv>
   </section>
 
   <!-- Statement Section -->
@@ -348,7 +368,7 @@
   </footer>
 
     <script>
-    // Toggle contact options visibility
+    // Toggle contact options visibility (Hero)
     function toggleContactOptions() {
       const options = document.getElementById('contactOptions');
       const btn = document.getElementById('getInTouchBtn');
@@ -359,7 +379,23 @@
       } else {
         options.classList.add('active');
         btn.textContent = 'CLOSE';
-        // Smooth scroll to options
+        setTimeout(() => {
+          options.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 100);
+      }
+    }
+
+    // Toggle Sound Examples contact options (NEW!)
+    function toggleSoundExamplesContact() {
+      const options = document.getElementById('soundExamplesContact');
+      const btn = document.getElementById('soundExamplesBtn');
+
+      if (options.classList.contains('active')) {
+        options.classList.remove('active');
+        btn.textContent = 'GET YOUR EXCLUSIVE FREE PREVIEW';
+      } else {
+        options.classList.add('active');
+        btn.textContent = 'CLOSE';
         setTimeout(() => {
           options.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }, 100);
@@ -383,7 +419,7 @@
       });
     }
 
-    // Copy email from Step 01 button (NEW!)
+    // Copy email from Step 01 button
     function copyEmailStep01() {
       const email = 'hello@bespokesound.site';
       navigator.clipboard.writeText(email).then(function() {
@@ -392,6 +428,23 @@
         btn.style.background = '#4CAF50';
         setTimeout(function() {
           btn.textContent = 'hello@bespokesound.site';
+          btn.style.background = '';
+        }, 2000);
+      }).catch(function(err) {
+        alert('Email: hello@bespokesound.site');
+      });
+    }
+
+    // Copy email from Sound Examples section (NEW!)
+    function copyEmailSoundExamples() {
+      const email = 'hello@bespokesound.site';
+      navigator.clipboard.writeText(email).then(function() {
+        const btn = document.getElementById('copyEmailSound');
+        const originalText = btn.textContent;
+        btn.textContent = '✓ Copied!';
+        btn.style.background = '#4CAF50';
+        setTimeout(function() {
+          btn.textContent = originalText;
           btn.style.background = '';
         }, 2000);
       }).catch(function(err) {
