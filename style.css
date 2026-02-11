@@ -743,6 +743,114 @@ img {
 
 
 
+
+/* ============================================================================
+   CONTACT OPTIONS REVEAL (GET IN TOUCH)
+   ========================================================================= */
+
+.contact-options {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.3s ease, margin 0.3s ease;
+  margin-top: 0;
+}
+
+.contact-options.active {
+  max-height: 300px;
+  opacity: 1;
+  margin-top: 32px;
+}
+
+.contact-options-label {
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 0 0 20px;
+  font-style: italic;
+}
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-method:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.contact-icon {
+  font-size: 20px;
+  margin-right: 12px;
+}
+
+.contact-value {
+  flex: 1;
+  font-size: 14px;
+  color: var(--text-main);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.contact-action-btn {
+  padding: 8px 18px;
+  background: var(--accent);
+  color: var(--bg);
+  border: none;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.contact-action-btn:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
+}
+
+.contact-action-link {
+  color: var(--bg);
+}
+
+/* Mobile responsive */
+@media (max-width: 640px) {
+  .contact-method {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .contact-value {
+    font-size: 13px;
+    word-break: break-all;
+  }
+
+  .contact-action-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 /* ============================================================================
    CONTACT INFO DISPLAY
    ========================================================================= */
