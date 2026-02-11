@@ -48,8 +48,29 @@
       
       <!-- Hero CTA -->
       <div class="hero-cta">
-        <button onclick="copyEmail()" class="btn btn-primary btn-large" id="emailBtn">Copy email address</button>
-        <a href="https://wa.me/447949375440" class="btn btn-outline btn-large">WhatsApp</a>
+        <button onclick="toggleContactOptions()" class="btn btn-primary btn-large" id="getInTouchBtn">
+          GET IN TOUCH
+        </button>
+      </div>
+
+      <!-- Contact Options (Hidden by default, revealed on click) -->
+      <div class="contact-options" id="contactOptions">
+        <p class="contact-options-label">Choose your preferred contact method:</p>
+        <div class="contact-methods">
+          <div class="contact-method">
+            <span class="contact-icon">📧</span>
+            <span class="contact-value">hello@bespokesound.site</span>
+            <button onclick="copyEmail()" class="contact-action-btn" id="copyEmailBtn">Copy</button>
+          </div>
+          <div class="contact-method">
+            <span class="contact-icon">💬</span>
+            <span class="contact-value">+44 7949 375 440</span>
+            <a href="https://wa.me/447949375440?text=Hi%20Gauthier%20%E2%80%94%20I%27d%20like%20a%20bespoke%20track.%0APlatform%3A%20%0AStyle%3A%20%0ADeadline%3A%20" 
+               target="_blank" 
+               rel="noopener" 
+               class="contact-action-btn contact-action-link">WhatsApp</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -326,7 +347,7 @@
     </div>
   </footer>
 
-  <script>
+    <script>
     // Toggle contact options visibility
     function toggleContactOptions() {
       const options = document.getElementById('contactOptions');
