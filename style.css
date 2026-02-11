@@ -422,7 +422,7 @@ img {
 
 .section-statement {
   background: var(--bg);
-  padding: 100px 0;
+  padding: 60px 0;
 }
 
 .statement-content {
@@ -672,7 +672,7 @@ img {
   gap: 60px;
   align-items: start;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 40px auto 0;
 }
 
 .about-photo {
