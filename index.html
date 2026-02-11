@@ -89,8 +89,8 @@
           Message me directly on WhatsApp or email. You'll get a clear recommendation and quote within 24 hours.
         </p>
         <div class="step-actions">
-          <button onclick="copyEmail()" class="btn btn-primary btn-large" id="emailBtn">Copy email address</button>
-          <a href="https://wa.me/447949375440" class="btn btn-outline btn-large">WhatsApp</a>
+          <button onclick="copyEmailStep01()" class="btn btn-primary btn-large" id="emailBtnStep01">hello@bespokesound.site</button>
+          <a href="https://wa.me/447949375440?text=Hi%20Gauthier%20%E2%80%94%20I%27d%20like%20a%20bespoke%20track.%0APlatform%3A%20%0AStyle%3A%20%0ADeadline%3A%20" target="_blank" rel="noopener" class="btn btn-outline btn-large">WhatsApp</a>
         </div>
       </div>
 
@@ -366,7 +366,7 @@
       }
     }
 
-    // Copy email function
+    // Copy email from Hero contact options
     function copyEmail() {
       const email = 'hello@bespokesound.site';
       navigator.clipboard.writeText(email).then(function() {
@@ -376,6 +376,22 @@
         btn.style.background = '#4CAF50';
         setTimeout(function() {
           btn.textContent = originalText;
+          btn.style.background = '';
+        }, 2000);
+      }).catch(function(err) {
+        alert('Email: hello@bespokesound.site');
+      });
+    }
+
+    // Copy email from Step 01 button (NEW!)
+    function copyEmailStep01() {
+      const email = 'hello@bespokesound.site';
+      navigator.clipboard.writeText(email).then(function() {
+        const btn = document.getElementById('emailBtnStep01');
+        btn.textContent = '✓ Copied!';
+        btn.style.background = '#4CAF50';
+        setTimeout(function() {
+          btn.textContent = 'hello@bespokesound.site';
           btn.style.background = '';
         }, 2000);
       }).catch(function(err) {
