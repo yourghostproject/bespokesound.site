@@ -444,7 +444,7 @@ img {
    PRICING – 3 cards top, 1 card bottom HORIZONTAL
    ========================================================================= */
 
-.pricing-grid-3 {
+.pricing-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
@@ -1112,7 +1112,7 @@ img {
    ========================================================================= */
 
 @media (max-width: 1024px) {
-  .pricing-grid-3 {
+  .pricing-grid {
     grid-template-columns: 1fr;
   }
   
