@@ -210,98 +210,152 @@
         <!-- Single Track -->
         <div class="pricing-card">
           <h3 class="pricing-title">Single Track</h3>
-          <p class="pricing-tagline">One custom soundtrack – test the sound</p>
+          <p class="pricing-tagline">Test the sound</p>
           <div class="pricing-price"><span class="price-value">from $790</span></div>
           <ul class="pricing-list">
-            <li>1 custom soundtrack reusable across all your videos</li>
-            <li>Optional vocal tag (e.g., "It's [YourName] again")</li>
-            <li>Ideal for brand recognition</li>
+            <li>1 custom soundtrack (100% original)</li>
+            <li>Commercial use included</li>
             <li>1 revision round included</li>
-            <li>Commercial use included</li>
-            <li>Delivered in all formats your editor needs</li>
-            <li>24–48 hour delivery</li>
+            <li>Delivered in all formats</li>
+            <li>Direct WhatsApp line with your producer (me)</li>
           </ul>
-          <div class="step-actions">
-            <a href="mailto:hello@bespokesound.site?subject=Package: Single Track" class="btn btn-outline btn-block">Email us</a>
-            <a href="https://wa.me/447949375440" class="btn btn-outline btn-block">WhatsApp</a>
+          <div class="package-cta">
+            <button onclick="togglePackage1Contact()" class="btn btn-primary btn-block" id="package1Btn">SELECT PACKAGE</button>
+          </div>
+          <div class="contact-options package-contact-options" id="package1Contact">
+            <p class="contact-options-label">Choose your preferred contact method:</p>
+            <div class="contact-methods">
+              <div class="contact-method">
+                <span class="contact-icon">📧</span>
+                <span class="contact-value">hello@bespokesound.site</span>
+                <button onclick="copyEmailPackage1()" class="contact-action-btn" id="copyEmailPkg1">Copy</button>
+              </div>
+              <div class="contact-method">
+                <span class="contact-icon">💬</span>
+                <span class="contact-value">+44 7949 375 440</span>
+                <a href="https://wa.me/447949375440?text=Hi%20Gauthier%2C%0A%0AI%27m%20interested%20in%20the%20Single%20Track%20package%20(from%20%24790).%0A%0ACould%20you%20provide%20more%20details%3F%0A%0AThanks!" target="_blank" rel="noopener" class="contact-action-btn contact-action-link">WhatsApp</a>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- Content Pack -->
+        <!-- Creator Pack (Weekly Standard) -->
         <div class="pricing-card pricing-card-featured">
-          <span class="badge">Best value</span>
-          <h3 class="pricing-title">Content Pack</h3>
-          <p class="pricing-tagline">Quick Start – up to 4 tracks / month</p>
-          <div class="pricing-price">
-            <span class="price-value">from $2,900</span>
-            <span class="price-period"> / month</span>
-          </div>
+          <span class="pricing-badge">MOST POPULAR</span>
+          <h3 class="pricing-title">Creator Pack</h3>
+          <p class="pricing-tagline">The Weekly Standard</p>
+          <div class="pricing-price"><span class="price-value">from $2,400</span> <span class="price-period">/ month</span></div>
           <ul class="pricing-list">
-            <li>Up to 4 soundtracks/month</li>
-            <li>Includes variations: intro/outro, cutdowns</li>
-            <li>Build your signature sound</li>
-            <li>2 revision rounds per track</li>
+            <li><strong>4 custom soundtracks / month</strong> (one per week)</li>
+            <li>Separated audio parts for cleaner edits (drums / melody split)</li>
+            <li>Perfect for weekly content + occasional client projects</li>
             <li>Commercial use included</li>
-            <li>All formats included</li>
-            <li>24–48 hour delivery per track</li>
+            <li>Priority 48-hour delivery</li>
+            <li>Direct WhatsApp line with your producer (me)</li>
           </ul>
-          <div class="step-actions">
-            <a href="mailto:hello@bespokesound.site?subject=Package: Content Pack" class="btn btn-primary btn-block">Email us</a>
-            <a href="https://wa.me/447949375440" class="btn btn-outline btn-block">WhatsApp</a>
+          <div class="package-cta">
+            <button onclick="togglePackage2Contact()" class="btn btn-primary btn-block" id="package2Btn">SELECT PACKAGE</button>
+          </div>
+          <div class="contact-options package-contact-options" id="package2Contact">
+            <p class="contact-options-label">Choose your preferred contact method:</p>
+            <div class="contact-methods">
+              <div class="contact-method">
+                <span class="contact-icon">📧</span>
+                <span class="contact-value">hello@bespokesound.site</span>
+                <button onclick="copyEmailPackage2()" class="contact-action-btn" id="copyEmailPkg2">Copy</button>
+              </div>
+              <div class="contact-method">
+                <span class="contact-icon">💬</span>
+                <span class="contact-value">+44 7949 375 440</span>
+                <a href="https://wa.me/447949375440?text=Hi%20Gauthier%2C%0A%0AI%27m%20interested%20in%20the%20Creator%20Pack%20(%242%2C400%2Fmonth).%0A%0ACould%20you%20provide%20more%20details%3F%0A%0AThanks!" target="_blank" rel="noopener" class="contact-action-btn contact-action-link">WhatsApp</a>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- Creator Studio -->
+        <!-- Content Pack (Full Channel Takeover) -->
         <div class="pricing-card">
-          <h3 class="pricing-title">Creator Studio</h3>
-          <p class="pricing-tagline">Monthly Retainer – your on‑call music director</p>
-          <div class="pricing-price"><span class="price-value">from $6,900</span> / month</div>
+          <h3 class="pricing-title">Content Pack</h3>
+          <p class="pricing-tagline">Full Channel Takeover</p>
+          <div class="pricing-price"><span class="price-value">from $4,200</span> <span class="price-period">/ month</span></div>
           <ul class="pricing-list">
-            <li>Up to 10 custom soundtracks per month</li>
-            <li>24–48 hour delivery</li>
+            <li><strong>8 custom soundtracks / month</strong> (2 per week)</li>
+            <li>Includes variations: intro/outro, cutdowns</li>
+            <li><strong>Ideal for creators running a business</strong> (real estate, fashion, lifestyle brands)</li>
+            <li>Build your signature sound across personal + business content</li>
             <li>Unlimited reasonable revisions</li>
-            <li>WhatsApp priority support</li>
-            <li>Monthly sonic strategy & direction</li>
-            <li>Music for launches, campaigns, ads</li>
-            <li>Commercial use included</li>
-            <li>All formats included</li>
+            <li>Sonic Branding Strategy included</li>
+            <li>Direct WhatsApp line with your producer (me)</li>
           </ul>
-          <div class="step-actions">
-            <a href="mailto:hello@bespokesound.site?subject=Package: Creator Studio" class="btn btn-outline btn-block">Email us</a>
-            <a href="https://wa.me/447949375440" class="btn btn-outline btn-block">WhatsApp</a>
+          <div class="package-cta">
+            <button onclick="togglePackage3Contact()" class="btn btn-primary btn-block" id="package3Btn">SELECT PACKAGE</button>
+          </div>
+          <div class="contact-options package-contact-options" id="package3Contact">
+            <p class="contact-options-label">Choose your preferred contact method:</p>
+            <div class="contact-methods">
+              <div class="contact-method">
+                <span class="contact-icon">📧</span>
+                <span class="contact-value">hello@bespokesound.site</span>
+                <button onclick="copyEmailPackage3()" class="contact-action-btn" id="copyEmailPkg3">Copy</button>
+              </div>
+              <div class="contact-method">
+                <span class="contact-icon">💬</span>
+                <span class="contact-value">+44 7949 375 440</span>
+                <a href="https://wa.me/447949375440?text=Hi%20Gauthier%2C%0A%0AI%27m%20interested%20in%20the%20Content%20Pack%20(%244%2C200%2Fmonth).%0A%0ACould%20you%20provide%20more%20details%3F%0A%0AThanks!" target="_blank" rel="noopener" class="contact-action-btn contact-action-link">WhatsApp</a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Private Producer -->
-      <div class="pricing-private-wrapper">
-        <div class="pricing-card pricing-card-private pricing-card-horizontal">
-          <div class="private-left">
+      </div>
+      <!-- End Main Pricing Grid -->
+
+      <!-- Private Producer Section -->
+      <div class="private-producer-section">
+        <div class="pricing-card-horizontal">
+          <div class="pricing-card-private">
             <h3 class="pricing-title">Private Producer</h3>
             <p class="pricing-tagline">Concierge audio department for your brand</p>
             <div class="pricing-price">
-              <span class="custom-price">Custom retainers – from $10,000+ / month</span><br>
+              <span class="custom-price">Custom retainers — from $10,000+ / month</span>
             </div>
-            <div class="step-actions">
-              <a href="mailto:hello@bespokesound.site?subject=Package: Private Producer - Quote Request" class="btn btn-primary btn-block">Email us</a>
-              <a href="https://wa.me/447949375440" class="btn btn-outline btn-block">WhatsApp</a>
+            <div class="package-cta">
+              <button onclick="togglePackage4Contact()" class="btn btn-primary btn-block" id="package4Btn">APPLY FOR WAITLIST</button>
+            </div>
+            <div class="contact-options package-contact-options" id="package4Contact">
+              <p class="contact-options-label">Choose your preferred contact method:</p>
+              <div class="contact-methods">
+                <div class="contact-method">
+                  <span class="contact-icon">📧</span>
+                  <span class="contact-value">hello@bespokesound.site</span>
+                  <button onclick="copyEmailPackage4()" class="contact-action-btn" id="copyEmailPkg4">Copy</button>
+                </div>
+                <div class="contact-method">
+                  <span class="contact-icon">💬</span>
+                  <span class="contact-value">+44 7949 375 440</span>
+                  <a href="https://wa.me/447949375440?text=Hi%20Gauthier%2C%0A%0AI%27d%20like%20to%20apply%20for%20the%20Private%20Producer%20waitlist.%0A%0ACould%20we%20schedule%20a%20call%3F%0A%0AThanks!" 
+                     target="_blank" 
+                     rel="noopener" 
+                     class="contact-action-btn contact-action-link">WhatsApp</a>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="private-right">
+          <div class="pricing-features">
             <ul class="pricing-list">
-              <li>Higher or unlimited track volume</li>
-              <li>24‑hour priority turnaround on briefs</li>
-              <li>Music for launches, events, brand deals</li>
-              <li>Full vlog / podcast / YouTube scoring</li>
+              <li>Priority WhatsApp line (direct to the studio)</li>
+              <li>High or unlimited track volume (based on needs)</li>
+              <li>24-hour turnaround on briefs</li>
+              <li><strong>Music for launches, events, client campaigns, brand deals</strong></li>
+              <li>Full long-form scoring (YouTube / vlog / podcast)</li>
               <li>Weekly strategy sessions</li>
-              <li>Long‑term signature sound development</li>
-              <li>Ultra‑limited client roster for maximum focus</li>
-              <li>Private WhatsApp line with the studio</li>
+              <li>Ultra-limited roster for maximum focus</li>
             </ul>
           </div>
         </div>
       </div>
+
     </div>
   </section>
 
