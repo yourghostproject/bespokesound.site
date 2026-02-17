@@ -210,7 +210,7 @@
       <p class="section-intro">Four ways to work with BESPØKE, from a single test track to a full private producer.</p>
 
       <!-- Main Pricing Grid - 3 Cards -->
-      <div class="pricing-grid">
+      <div class="pricing-grid-3">
 
         <!-- Single Track -->
         <div class="pricing-card">
@@ -223,22 +223,10 @@
             <li>1 revision round included</li>
             <li>Delivered in all formats</li>
           </ul>
-          <div class="package-cta">
-            <button onclick="togglePackage1Contact()" class="btn btn-primary btn-block" id="package1Btn">SELECT PACKAGE</button>
+          <div class="step-actions">
+            <a href="mailto:hello@bespokesound.site?subject=Package:%20Single%20Track" class="btn btn-primary btn-block">Email us</a>
+            <a href="https://wa.me/447949375440?text=Hi%20Gauthier%2C%0A%0AI%27m%20interested%20in%20the%20Single%20Track%20package%20(from%20%24790).%0A%0ACould%20you%20provide%20more%20details%3F%0A%0AThanks!" target="_blank" rel="noopener" class="btn btn-outline btn-block">WhatsApp</a>
           </div>
-          <div class="contact-options package-contact-options" id="package1Contact">
-            <p class="contact-options-label">Choose your preferred contact method:</p>
-            <div class="contact-methods">
-              <div class="contact-method">
-                <span class="contact-icon">📧</span>
-                <span class="contact-value">hello@bespokesound.site</span>
-                <button onclick="copyEmailPackage1()" class="contact-action-btn" id="copyEmailPkg1">Copy</button>
-              </div>
-              <div class="contact-method">
-                <span class="contact-icon">💬</span>
-                <span class="contact-value">+44 7949 375 440</span>
-                <a href="https://wa.me/447949375440?text=Hi%20Gauthier%2C%0A%0AI%27m%20interested%20in%20the%20Single%20Track%20package%20(from%20%24790).%0A%0ACould%20you%20provide%20more%20details%3F%0A%0AThanks!" target="_blank" rel="noopener" class="contact-action-btn contact-action-link">WhatsApp</a>
-              </div>
             </div>
           </div>
         </div>
@@ -255,22 +243,10 @@
             <li>Commercial use included</li>
             <li>Priority 48-hour delivery</li>
           </ul>
-          <div class="package-cta">
-            <button onclick="togglePackage2Contact()" class="btn btn-primary btn-block" id="package2Btn">SELECT PACKAGE</button>
+          <div class="step-actions">
+            <a href="mailto:hello@bespokesound.site?subject=Package:%20Creator%20Pack" class="btn btn-primary btn-block">Email us</a>
+            <a href="https://wa.me/447949375440?text=Hi%20Gauthier%2C%0A%0AI%27m%20interested%20in%20the%20Creator%20Pack%20(%241%2C500%2Fmonth).%0A%0ACould%20you%20provide%20more%20details%3F%0A%0AThanks!" target="_blank" rel="noopener" class="btn btn-outline btn-block">WhatsApp</a>
           </div>
-          <div class="contact-options package-contact-options" id="package2Contact">
-            <p class="contact-options-label">Choose your preferred contact method:</p>
-            <div class="contact-methods">
-              <div class="contact-method">
-                <span class="contact-icon">📧</span>
-                <span class="contact-value">hello@bespokesound.site</span>
-                <button onclick="copyEmailPackage2()" class="contact-action-btn" id="copyEmailPkg2">Copy</button>
-              </div>
-              <div class="contact-method">
-                <span class="contact-icon">💬</span>
-                <span class="contact-value">+44 7949 375 440</span>
-                <a href="https://wa.me/447949375440?text=Hi%20Gauthier%2C%0A%0AI%27m%20interested%20in%20the%20Creator%20Pack%20(%241%2C500%2Fmonth).%0A%0ACould%20you%20provide%20more%20details%3F%0A%0AThanks!" target="_blank" rel="noopener" class="contact-action-btn contact-action-link">WhatsApp</a>
-              </div>
             </div>
           </div>
         </div>
@@ -288,22 +264,10 @@
             <li>Unlimited reasonable revisions</li>
             <li><strong>Sonic Branding Strategy included</strong></li>
           </ul>
-          <div class="package-cta">
-            <button onclick="togglePackage3Contact()" class="btn btn-primary btn-block" id="package3Btn">SELECT PACKAGE</button>
+          <div class="step-actions">
+            <a href="mailto:hello@bespokesound.site?subject=Package:%20Content%20Pack" class="btn btn-primary btn-block">Email us</a>
+            <a href="https://wa.me/447949375440?text=Hi%20Gauthier%2C%0A%0AI%27m%20interested%20in%20the%20Content%20Pack%20(%242%2C900%2Fmonth).%0A%0ACould%20you%20provide%20more%20details%3F%0A%0AThanks!" target="_blank" rel="noopener" class="btn btn-outline btn-block">WhatsApp</a>
           </div>
-          <div class="contact-options package-contact-options" id="package3Contact">
-            <p class="contact-options-label">Choose your preferred contact method:</p>
-            <div class="contact-methods">
-              <div class="contact-method">
-                <span class="contact-icon">📧</span>
-                <span class="contact-value">hello@bespokesound.site</span>
-                <button onclick="copyEmailPackage3()" class="contact-action-btn" id="copyEmailPkg3">Copy</button>
-              </div>
-              <div class="contact-method">
-                <span class="contact-icon">💬</span>
-                <span class="contact-value">+44 7949 375 440</span>
-                <a href="https://wa.me/447949375440?text=Hi%20Gauthier%2C%0A%0AI%27m%20interested%20in%20the%20Content%20Pack%20(%242%2C900%2Fmonth).%0A%0ACould%20you%20provide%20more%20details%3F%0A%0AThanks!" target="_blank" rel="noopener" class="contact-action-btn contact-action-link">WhatsApp</a>
-              </div>
             </div>
           </div>
         </div>
@@ -437,39 +401,21 @@
       }
     }
 
-    function togglePackage1Contact() {
-      const options = document.getElementById('package1Contact');
-      const btn = document.getElementById('package1Btn');
-      if (options.classList.contains('active')) {
-        options.classList.remove('active');
-        btn.textContent = 'SELECT PACKAGE';
-      } else {
+     else {
         options.classList.add('active');
         btn.textContent = 'CLOSE';
         setTimeout(() => { options.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }, 100);
       }
     }
 
-    function togglePackage2Contact() {
-      const options = document.getElementById('package2Contact');
-      const btn = document.getElementById('package2Btn');
-      if (options.classList.contains('active')) {
-        options.classList.remove('active');
-        btn.textContent = 'SELECT PACKAGE';
-      } else {
+     else {
         options.classList.add('active');
         btn.textContent = 'CLOSE';
         setTimeout(() => { options.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }, 100);
       }
     }
 
-    function togglePackage3Contact() {
-      const options = document.getElementById('package3Contact');
-      const btn = document.getElementById('package3Btn');
-      if (options.classList.contains('active')) {
-        options.classList.remove('active');
-        btn.textContent = 'SELECT PACKAGE';
-      } else {
+     else {
         options.classList.add('active');
         btn.textContent = 'CLOSE';
         setTimeout(() => { options.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }, 100);
@@ -519,33 +465,15 @@
       }).catch(function(err) { alert('Email: hello@bespokesound.site'); });
     }
 
-    function copyEmailPackage1() {
-      const email = 'hello@bespokesound.site';
-      navigator.clipboard.writeText(email).then(function() {
-        const btn = document.getElementById('copyEmailPkg1');
-        btn.textContent = '✓ Copied!';
-        btn.style.background = '#4CAF50';
-        setTimeout(function() { btn.textContent = 'Copy'; btn.style.background = ''; }, 2000);
+    , 2000);
       }).catch(function(err) { alert('Email: hello@bespokesound.site'); });
     }
 
-    function copyEmailPackage2() {
-      const email = 'hello@bespokesound.site';
-      navigator.clipboard.writeText(email).then(function() {
-        const btn = document.getElementById('copyEmailPkg2');
-        btn.textContent = '✓ Copied!';
-        btn.style.background = '#4CAF50';
-        setTimeout(function() { btn.textContent = 'Copy'; btn.style.background = ''; }, 2000);
+    , 2000);
       }).catch(function(err) { alert('Email: hello@bespokesound.site'); });
     }
 
-    function copyEmailPackage3() {
-      const email = 'hello@bespokesound.site';
-      navigator.clipboard.writeText(email).then(function() {
-        const btn = document.getElementById('copyEmailPkg3');
-        btn.textContent = '✓ Copied!';
-        btn.style.background = '#4CAF50';
-        setTimeout(function() { btn.textContent = 'Copy'; btn.style.background = ''; }, 2000);
+    , 2000);
       }).catch(function(err) { alert('Email: hello@bespokesound.site'); });
     }
 
