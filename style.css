@@ -422,7 +422,7 @@ img {
 
 .section-statement {
   background: var(--bg);
-  padding: 60px 0;
+  padding: 20px 0;
 }
 
 .statement-content {
@@ -443,6 +443,10 @@ img {
 /* ============================================================================
    PRICING – 3 cards top, 1 card bottom HORIZONTAL
    ========================================================================= */
+
+#packages {
+  padding-top: 40px;
+}
 
 .pricing-grid-3 {
   display: grid;
@@ -777,7 +781,7 @@ img {
 }
 
 .contact-options.active {
-  max-height: 300px;
+  max-height: 500px;
   opacity: 1;
   margin-top: 32px;
 }
@@ -886,7 +890,7 @@ img {
 }
 
 .contact-options.active {
-  max-height: 300px;
+  max-height: 500px;
   opacity: 1;
   margin-top: 32px;
 }
