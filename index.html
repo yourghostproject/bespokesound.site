@@ -200,30 +200,6 @@
       <h2 class="section-title">Packages</h2>
       <p class="section-intro">Four ways to work with BESPØKE, from a single test track to a full private producer.</p>
 
-      <!-- Bouton centralisé unique -->
-      <div style="text-align: center; margin: 40px 0 60px 0;">
-        <button onclick="toggleGlobalContact()" class="btn btn-primary" id="globalContactBtn" style="font-size: 18px; padding: 18px 50px;">
-          LET'S TALK
-        </button>
-      </div>
-
-      <!-- Options de contact global -->
-      <div class="contact-options" id="globalContact" style="max-width: 600px; margin: 0 auto 60px auto;">
-        <p class="contact-options-label">Choose your preferred contact method:</p>
-        <div class="contact-methods">
-          <div class="contact-method">
-            <span class="contact-icon">📧</span>
-            <span class="contact-value">hello@bespokesound.site</span>
-            <button onclick="copyEmailGlobal()" class="contact-action-btn" id="copyEmailGlobal">Copy</button>
-          </div>
-          <div class="contact-method">
-            <span class="contact-icon">💬</span>
-            <span class="contact-value">+44 7949 375 440</span>
-            <a href="https://wa.me/447949375440?text=Hi%20Gauthier%2C%0A%0AI%27m%20interested%20in%20one%20of%20your%20packages.%0A%0APackage%20I%27m%20considering%3A%20%0A%0AA%20bit%20about%20my%20project%3A%20%0A%0AThanks!" target="_blank" rel="noopener" class="contact-action-btn contact-action-link">WhatsApp</a>
-          </div>
-        </div>
-      </div>
-
       <!-- Grille de 3 packages -->
       <div class="pricing-grid-3">
 
@@ -233,8 +209,8 @@
           <p class="pricing-tagline">Test the sound</p>
           <div class="pricing-price"><span class="price-value">from $790</span></div>
           <ul class="pricing-list">
-            <li><strong style="color:var(--text-main);">1 custom soundtrack</strong> (100% original)</li>
-            <li><strong style="color:var(--text-main);">Commercial use included</strong></li>
+            <li class="li-highlight">✦ 1 custom soundtrack — 100% original &amp; exclusive</li>
+            <li class="li-highlight">✦ Commercial use included — yours forever</li>
             <li>1 revision round included</li>
             <li>Delivered in all formats</li>
             <li>Direct WhatsApp line with your producer</li>
@@ -248,10 +224,10 @@
           <p class="pricing-tagline">The Weekly Standard</p>
           <div class="pricing-price"><span class="price-value">from $2,400</span> <span class="price-period">/ month</span></div>
           <ul class="pricing-list">
-            <li><strong style="color:var(--text-main);">4 custom soundtracks / month</strong> (one per week)</li>
+            <li class="li-highlight">✦ 4 custom soundtracks / month (one per week)</li>
+            <li class="li-highlight">✦ Commercial use included — yours forever</li>
             <li>Separated audio parts for cleaner edits (drums / melody split)</li>
             <li>Perfect for weekly content + occasional client projects</li>
-            <li><strong style="color:var(--text-main);">Commercial use included</strong></li>
             <li>Priority 48-hour delivery</li>
             <li>Direct WhatsApp line with your producer</li>
           </ul>
@@ -263,10 +239,10 @@
           <p class="pricing-tagline">Full Channel Takeover</p>
           <div class="pricing-price"><span class="price-value">from $4,200</span> <span class="price-period">/ month</span></div>
           <ul class="pricing-list">
-            <li><strong style="color:var(--text-main);">8 custom soundtracks / month</strong> (2 per week)</li>
+            <li class="li-highlight">✦ 8 custom soundtracks / month (2 per week)</li>
+            <li class="li-highlight">✦ Commercial use included — yours forever</li>
             <li>Includes variations: intro/outro, cutdowns</li>
-            <li><strong style="color:var(--text-main);">Ideal for creators running a business</strong> (real estate, fashion, lifestyle brands)</li>
-            <li>Build your signature sound across personal + business content</li>
+            <li>Ideal for creators running a business (real estate, fashion, lifestyle)</li>
             <li>Unlimited reasonable revisions</li>
             <li>Sonic Branding Strategy included</li>
             <li>Direct WhatsApp line with your producer</li>
@@ -276,27 +252,46 @@
       </div>
       <!-- End Main Pricing Grid -->
 
-      <!-- Private Producer Section (en bas, pleine largeur) -->
+      <!-- Private Producer Section (pleine largeur, tout centré) -->
       <div class="private-producer-section">
-        <div class="pricing-card pricing-card-horizontal">
-          <div class="pricing-card-private">
-            <h3 class="pricing-title">Private Producer</h3>
-            <p class="pricing-tagline">Concierge audio department for your brand</p>
-            <div class="pricing-price">
-              <span class="custom-price">Custom retainers — from $10,000+ / month</span>
-            </div>
+        <div class="pricing-card pricing-card-pp-centered">
+          <h3 class="pricing-title">Private Producer</h3>
+          <p class="pricing-tagline">Full exclusivity, unlimited tracks.</p>
+          <div class="pricing-price">
+            <span class="custom-price">Custom retainers — from $10,000+ / month</span>
           </div>
+          <ul class="pricing-list pricing-list-pp">
+            <li>Priority WhatsApp line (direct to the studio)</li>
+            <li>High or unlimited track volume (based on needs)</li>
+            <li>24-hour turnaround on briefs</li>
+            <li><strong>Music for launches, events, client campaigns, brand deals</strong></li>
+            <li>Full long-form scoring (YouTube / vlog / podcast)</li>
+            <li>Weekly strategy sessions</li>
+            <li>Ultra-limited roster for maximum focus</li>
+          </ul>
+        </div>
+      </div>
 
-          <div class="pricing-features" style="display:flex;justify-content:center;">
-            <ul class="pricing-list" style="margin:0 auto;">
-              <li>Priority WhatsApp line (direct to the studio)</li>
-              <li>High or unlimited track volume (based on needs)</li>
-              <li>24-hour turnaround on briefs</li>
-              <li><strong>Music for launches, events, client campaigns, brand deals</strong></li>
-              <li>Full long-form scoring (YouTube / vlog / podcast)</li>
-              <li>Weekly strategy sessions</li>
-              <li>Ultra-limited roster for maximum focus</li>
-            </ul>
+      <!-- LET'S TALK — after all packages -->
+      <div class="packages-cta-wrap">
+        <button onclick="toggleGlobalContact()" class="btn btn-primary btn-letstalk" id="globalContactBtn">
+          LET'S TALK
+        </button>
+      </div>
+
+      <!-- Options de contact global -->
+      <div class="contact-options" id="globalContact" style="max-width: 600px; margin: 0 auto 20px auto;">
+        <p class="contact-options-label">Choose your preferred contact method:</p>
+        <div class="contact-methods">
+          <div class="contact-method">
+            <span class="contact-icon">📧</span>
+            <span class="contact-value">hello@bespokesound.site</span>
+            <button onclick="copyEmailGlobal()" class="contact-action-btn" id="copyEmailGlobal">Copy</button>
+          </div>
+          <div class="contact-method">
+            <span class="contact-icon">💬</span>
+            <span class="contact-value">+44 7949 375 440</span>
+            <a href="https://wa.me/447949375440?text=Hi%20Gauthier%2C%0A%0AI%27m%20interested%20in%20one%20of%20your%20packages.%0A%0APackage%20I%27m%20considering%3A%20%0A%0AA%20bit%20about%20my%20project%3A%20%0A%0AThanks!" target="_blank" rel="noopener" class="contact-action-btn contact-action-link">WhatsApp</a>
           </div>
         </div>
       </div>
