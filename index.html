@@ -59,7 +59,7 @@
         <div class="contact-methods">
           <div class="contact-method">
             <span class="contact-icon">📧</span>
-            <span class="contact-value">hello@bespokesound.site</span>
+            <span class="contact-value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5c34393030331c3e392f2c3337392f33293238722f352839">[email&#160;protected]</a></span>
             <button onclick="copyEmail()" class="contact-action-btn" id="copyEmailBtn">Copy</button>
           </div>
           <div class="contact-method">
@@ -89,7 +89,7 @@
           Message me directly on WhatsApp or email. You'll get a clear recommendation and quote within 24 hours.
         </p>
         <div class="step-actions">
-          <button onclick="copyEmailStep01()" class="btn btn-primary btn-large" id="emailBtnStep01">hello@bespokesound.site</button>
+          <button onclick="copyEmailStep01()" class="btn btn-primary btn-large" id="emailBtnStep01"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3a525f5656557a585f494a55515f49554f545e1449534e5f">[email&#160;protected]</a></button>
           <a href="https://wa.me/447949375440?text=Hi%20Gauthier%20%E2%80%94%20I%27d%20like%20a%20bespoke%20track.%0APlatform%3A%20%0AStyle%3A%20%0ADeadline%3A%20" target="_blank" rel="noopener" class="btn btn-outline btn-large">WhatsApp</a>
         </div>
       </div>
@@ -172,7 +172,7 @@
         <div class="contact-methods">
           <div class="contact-method">
             <span class="contact-icon">📧</span>
-            <span class="contact-value">hello@bespokesound.site</span>
+            <span class="contact-value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ec8489808083ac8e899f9c8387899f83998288c29f859889">[email&#160;protected]</a></span>
             <button onclick="copyEmailSoundExamples()" class="contact-action-btn" id="copyEmailSound">Copy</button>
           </div>
           <div class="contact-method">
@@ -214,12 +214,12 @@
       </div>
 
       <!-- Options de contact global (cachées par défaut) -->
-      <div class="contact-options" id="globalContact" style="display: none; max-width: 600px; margin: 0 auto 60px auto;">
+      <div class="contact-options" id="globalContact" style="max-width: 600px; margin: 0 auto 60px auto;">
         <p class="contact-options-label">Choose your preferred contact method:</p>
         <div class="contact-methods">
           <div class="contact-method">
             <span class="contact-icon">📧</span>
-            <span class="contact-value">hello@bespokesound.site</span>
+            <span class="contact-value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ec8489808083ac8e899f9c8387899f83998288c29f859889">[email&#160;protected]</a></span>
             <button onclick="copyEmailGlobal()" class="contact-action-btn" id="copyEmailGlobal">Copy</button>
           </div>
           <div class="contact-method">
@@ -284,7 +284,7 @@
 
       <!-- Private Producer Section (en bas, pleine largeur) -->
       <div class="private-producer-section">
-        <div class="pricing-card-horizontal">
+        <div class="pricing-card pricing-card-horizontal">
           <div class="pricing-card-private">
             <h3 class="pricing-title">Private Producer</h3>
             <p class="pricing-tagline">Concierge audio department for your brand</p>
@@ -341,7 +341,7 @@
       <div class="contact-info">
         <p class="contact-detail">
           <span class="contact-label">Email:</span> 
-          <a href="mailto:hello@bespokesound.site" class="contact-link">hello@bespokesound.site</a>
+          <a href="/cdn-cgi/l/email-protection#83ebe6efefecc3e1e6f0f3ece8e6f0ecf6ede7adf0eaf7e6" class="contact-link"><span class="__cf_email__" data-cfemail="5d35383131321d3f382e2d3236382e32283339732e342938">[email&#160;protected]</span></a>
         </p>
         <p class="contact-detail">
           <span class="contact-label">WhatsApp:</span> 
@@ -365,15 +365,49 @@
           <p>Based in London, UK | Working globally</p>
         </div>
         <div class="footer-right">
-          <a href="mailto:hello@bespokesound.site">hello@bespokesound.site</a>
+          <a href="/cdn-cgi/l/email-protection#4e262b2222210e2c2b3d3e21252b3d213b202a603d273a2b"><span class="__cf_email__" data-cfemail="9cf4f9f0f0f3dcfef9efecf3f7f9eff3e9f2f8b2eff5e8f9">[email&#160;protected]</span></a>
           <a href="https://wa.me/447949375440">+44 7949 375 440</a>
         </div>
       </div>
     </div>
   </footer>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     // Toggle contact options visibility (Hero)
+    // Toggle contact options in Packages section (Let's Talk button)
+    function toggleGlobalContact() {
+      const options = document.getElementById('globalContact');
+      const btn = document.getElementById('globalContactBtn');
+
+      if (options.classList.contains('active')) {
+        options.classList.remove('active');
+        btn.textContent = "LET'S TALK";
+      } else {
+        options.classList.add('active');
+        btn.textContent = 'CLOSE';
+        setTimeout(() => {
+          options.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 100);
+      }
+    }
+
+    // Copy email from Packages section
+    function copyEmailGlobal() {
+      const email = 'hello@bespokesound.site';
+      navigator.clipboard.writeText(email).then(function() {
+        const btn = document.getElementById('copyEmailGlobal');
+        const originalText = btn.textContent;
+        btn.textContent = '✓ Copied!';
+        btn.style.background = '#4CAF50';
+        setTimeout(function() {
+          btn.textContent = originalText;
+          btn.style.background = '';
+        }, 2000);
+      }).catch(function(err) {
+        alert('Email: hello@bespokesound.site');
+      });
+    }
+
     function toggleContactOptions() {
       const options = document.getElementById('contactOptions');
       const btn = document.getElementById('getInTouchBtn');
@@ -449,38 +483,4 @@
         btn.textContent = '✓ Copied!';
         btn.style.background = '#4CAF50';
         setTimeout(function() {
-          btn.textContent = originalText;
-          btn.style.background = '';
-        }, 2000);
-      }).catch(function(err) {
-        alert('Email: hello@bespokesound.site');
-      });
-    }
-  
-
-// Toggle global contact options
-function toggleGlobalContact() {
-  var contactDiv = document.getElementById('globalContact');
-  var btn = document.getElementById('globalContactBtn');
-
-  if (contactDiv.style.display === 'none' || contactDiv.style.display === '') {
-    contactDiv.style.display = 'block';
-    btn.textContent = 'CLOSE';
-  } else {
-    contactDiv.style.display = 'none';
-    btn.textContent = "LET'S TALK";
-  }
-}
-
-// Copy email for global button
-function copyEmailGlobal() {
-  navigator.clipboard.writeText('hello@bespokesound.site');
-  var btn = document.getElementById('copyEmailGlobal');
-  btn.textContent = '✓ Copied';
-  setTimeout(function() {
-    btn.textContent = 'Copy';
-  }, 2000);
-}
-</script>
-</body>
-</html>
+          btn.textContent = origina
