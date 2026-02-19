@@ -1372,109 +1372,88 @@ img {
 
 
 /* ═══════════════════════════════════════════════
-   SCROLL & ENTRANCE ANIMATIONS
-   Ultra clean — fade up, once, no repeat
+   iPhone frame for Sound Examples videos
 ════════════════════════════════════════════════ */
 
-/* Base state: hidden, shifted down */
-[data-animate] {
-  opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.72s cubic-bezier(0.22, 1, 0.36, 1),
-              transform 0.72s cubic-bezier(0.22, 1, 0.36, 1);
-  will-change: opacity, transform;
+.sound-preview {
+  display: flex;
+  justify-content: center;
 }
 
-/* Visible state: fully shown */
-[data-animate].is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Hero entrance — slightly longer for drama */
-.hero-title[data-animate],
-.hero-subtitle[data-animate] {
-  transition-duration: 0.9s;
-}
-
-/* Staggered grid children — pricing cards */
-.pricing-grid-3[data-animate].is-visible .pricing-card:nth-child(1) {
-  animation: fadeUpCard 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.05s both;
-}
-.pricing-grid-3[data-animate].is-visible .pricing-card:nth-child(2) {
-  animation: fadeUpCard 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.18s both;
-}
-.pricing-grid-3[data-animate].is-visible .pricing-card:nth-child(3) {
-  animation: fadeUpCard 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.31s both;
-}
-
-/* Sound cards stagger */
-.sound-grid[data-animate].is-visible .sound-card:nth-child(1) {
-  animation: fadeUpCard 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.05s both;
-}
-.sound-grid[data-animate].is-visible .sound-card:nth-child(2) {
-  animation: fadeUpCard 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.18s both;
-}
-.sound-grid[data-animate].is-visible .sound-card:nth-child(3) {
-  animation: fadeUpCard 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.31s both;
-}
-
-/* Step cards stagger */
-.steps-grid[data-animate].is-visible .step-card:nth-child(1) {
-  animation: fadeUpCard 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.05s both;
-}
-.steps-grid[data-animate].is-visible .step-card:nth-child(2) {
-  animation: fadeUpCard 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
-}
-
-@keyframes fadeUpCard {
-  from {
-    opacity: 0;
-    transform: translateY(32px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Nav smooth active link indicator */
-.main-nav a {
+.iphone-frame {
   position: relative;
+  width: min(340px, 92vw);
+  aspect-ratio: 9 / 19.5;
+  padding: 14px;
+  border-radius: 46px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.04));
+  border: 1px solid rgba(255,255,255,0.14);
+  box-shadow:
+    0 22px 80px rgba(0,0,0,0.55),
+    inset 0 1px 0 rgba(255,255,255,0.10);
 }
-.main-nav a::after {
-  content: '';
+
+.iphone-frame::before {
+  content: "";
   position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background: var(--accent);
-  transition: width 0.3s ease;
+  inset: 10px;
+  border-radius: 38px;
+  border: 1px solid rgba(0,0,0,0.55);
+  pointer-events: none;
 }
-.main-nav a:hover::after {
+
+.iphone-frame::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  height: 26px;
+  background: rgba(0,0,0,0.92);
+  border-radius: 0 0 18px 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+  pointer-events: none;
+}
+
+.iphone-screen {
+  position: relative;
   width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 36px;
+  background: #000;
 }
 
-/* Subtle header scroll shadow */
-.site-header {
-  transition: box-shadow 0.3s ease, background 0.3s ease;
-}
-.site-header.scrolled {
-  box-shadow: 0 1px 32px rgba(0,0,0,0.45);
-  background: rgba(10,10,10,0.98);
+.sound-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-/* Respect reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  [data-animate] {
-    opacity: 1;
-    transform: none;
-    transition: none;
+.video-watermark {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.86);
+  background: rgba(0,0,0,0.38);
+  border: 1px solid rgba(255,255,255,0.14);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  pointer-events: none;
+}
+
+@media (max-width: 420px) {
+  .iphone-frame {
+    width: min(320px, 92vw);
+    padding: 13px;
+    border-radius: 44px;
   }
-  .pricing-grid-3[data-animate].is-visible .pricing-card,
-  .sound-grid[data-animate].is-visible .sound-card,
-  .steps-grid[data-animate].is-visible .step-card {
-    animation: none;
-  }
+  .iphone-screen { border-radius: 34px; }
 }
